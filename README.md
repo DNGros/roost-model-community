@@ -40,7 +40,7 @@ For RMC’s purposes, we see “open safety models” as an AI model that:
 Additionally, we prefer models that do not have non-commercial licenses and licenses that do not place restrictions on how outputs are handled. This is because many use cases for these models happen in commercial environments and have reporting requirements (such as CSAM). These license restrictions are incompatible with the Trust & Safety users RMC aims to support. 
 
 ## RMC Partners
-* OpenAI: gpt-oss-safeguard
+* OpenAI: [gpt-oss-safeguard](https://huggingface.co/collections/openai/gpt-oss-safeguard)
 
 To discuss being an RMC Partner, email hello@roost.tools.
 
