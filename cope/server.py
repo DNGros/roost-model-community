@@ -23,7 +23,7 @@ llm = LLM(
 
 class ChatRequest(BaseModel):
     messages: list[dict]
-    max_tokens: int = 128
+    max_tokens: int = 1
     temperature: float = 0.0
     top_p: float = 1.0
     policy: str | None = None
@@ -31,16 +31,27 @@ class ChatRequest(BaseModel):
 
 def build_cope_prompt(policy: str, content: str) -> str:
     """Build the CoPE prompt format with INSTRUCTIONS, POLICY, CONTENT, ANSWER sections."""
-    return f"""### INSTRUCTIONS
-Examine the POLICY against the CONTENT and respond with the appropriate label.
+    return f"""INSTRUCTIONS
+============
 
-### POLICY
+Examine the given POLICY and determine if the given CONTENT meets the criteria for ANY of the LABELS. Answer "1" if yes, and "0" if no.
+
+
+POLICY
+======
+
 {policy}
 
-### CONTENT
+
+CONTENT
+=======
+
 {content}
 
-### ANSWER
+
+ANSWER
+======
+
 """
 
 
