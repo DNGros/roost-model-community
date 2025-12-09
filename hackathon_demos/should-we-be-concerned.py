@@ -188,10 +188,10 @@ def classify_author(author_hash_manual: str, author_hash_dropdown: str, policy_t
 # 6. Gradio UI
 # -----------------------------
 
-with gr.Blocks(title="Good Person? Bad Person?") as gradio_app:
+with gr.Blocks(title="Should We Be Concerned?") as gradio_app:
     gr.Markdown(
         """
-        # Good Person? Bad Person? (Demo on Exorde Dataset)
+        # Should We Be Concerned? (Demo on Exorde Dataset)
 
         Paste an `author_hash` from the **Exorde/exorde-social-media-one-month-2024** dataset
         or pick one of the example users below.  
