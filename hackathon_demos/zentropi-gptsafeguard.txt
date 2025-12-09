@@ -1,0 +1,1 @@
+We built support for using gpt-oss-safeguard-20b as the backend interpreting model for Zentropi. This means that people can use Zentropi to iterate on and automatically optimize policies that work well with gpt-oss-safeguard.
