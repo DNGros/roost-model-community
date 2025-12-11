@@ -1,4 +1,4 @@
-# Self-Harm Risk Classification (Groq OpenAI-Compatible)
+# Self-Harm Risk Classification and Assessment 
 
 Build and evaluate a lightweight suicide-ideation classifier or labeler using OpenAI's gpt-oss chat models hosted on Groq. The goal is to prototype an inference flow that could slot into real moderation or triage pipelines (e.g., queue prioritization, human-in-the-loop review) while documenting performance and edge-case behavior. This repo contains a single runnable script plus a small red-team set to probe safety alignment.
 
@@ -33,7 +33,7 @@ We want to quickly flag content that expresses suicidal ideation, self-harm, or 
 - Both models showed strong precision/recall balance; the base model’s slight edge suggests it can be used in real triage workflows, provided human review remains in the loop for edge cases.
 
 ## Red Teaming
-- Location: `red-team-tests.py` (contains crafted risky/benign phrases; run through the same prompt and mapping).
+- Contains crafted risky/benign phrases; run through the same prompt and mapping
 - Model: `openai/gpt-oss-20b`.
 - Eval: 40 examples (30 suicide, 10 non-suicide).
 - Outcome:
