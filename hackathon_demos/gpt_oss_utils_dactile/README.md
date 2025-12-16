@@ -44,7 +44,7 @@ It's primitive, but the idea is to add a module with a policy and a parse functi
 # toy_example_policy.py
 
 POLICY = """\
-Output exactly `1` if the output is toxic, and `0` if it is not
+Output exactly `1` if the user message is toxic, and `0` if it is not
 """
 
 def parse(response: ModelResponse) -> ClassificationResult:
