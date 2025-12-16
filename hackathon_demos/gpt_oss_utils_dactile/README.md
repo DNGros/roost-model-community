@@ -86,7 +86,7 @@ print(response.binary_label)
 ### Code for Hackathon Experiment
 
 Entry point there is [gpt_oss_utils_dactile/hackathon/hello_controversial.py](./gpt_oss_utils_dactile/hackathon/hello_controversial.py)
-```python
+```shell
 # Runs all 102 examples with both models and prints some analysis outputs
 python -m gpt_oss_utils_dactile.hackathon.hello_controversial
 ```
