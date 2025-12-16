@@ -2,7 +2,8 @@ This directory puts together some utils used in my exploration
 of GPT-OSS-Safeguard. This is a partial mirror of 
 [DNGros/gptossexp-workspace](https://github.com/DNGros/gptossexp-workspace) 
 trying to pull out some of the more generally useful bits 
-without as much cruft. However, it's still pretty hacky.
+without as much cruft. However, it's still pretty hacky and might fall
+out of date with my main experiments repo if I make more edits in the future.
 
 ## Hackathon Contributions
 
@@ -47,7 +48,6 @@ Output exactly `1` if the output is toxic, and `0` if it is not
 """
 
 def parse(response: ModelResponse) -> ClassificationResult:
-    """Parse toxic_chat_claude_1 policy response with binary 0/1 labels."""
     text = response.response.strip()
     binary_label = (text == "1")
     return ClassificationResult(
