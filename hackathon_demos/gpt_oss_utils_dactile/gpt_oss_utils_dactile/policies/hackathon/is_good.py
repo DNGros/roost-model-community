@@ -1,6 +1,6 @@
-from workspace.classify import ClassificationResult
-from workspace.model_predict import ModelResponse
-from workspace.policies.hackathon.parse_likert import parse_likert
+from gpt_oss_utils_dactile.classify import ClassificationResult
+from gpt_oss_utils_dactile.model_predict import ModelResponse
+from gpt_oss_utils_dactile.policies.hackathon.parse_likert import parse_likert
 
 POLICY = """\
 ## User message labeling

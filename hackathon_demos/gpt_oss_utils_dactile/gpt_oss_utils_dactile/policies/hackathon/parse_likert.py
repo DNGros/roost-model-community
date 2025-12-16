@@ -1,6 +1,6 @@
 import re
-from workspace.classify import ClassificationResult
-from workspace.model_predict import ModelResponse
+from gpt_oss_utils_dactile.classify import ClassificationResult
+from gpt_oss_utils_dactile.model_predict import ModelResponse
 
 
 def parse_likert(

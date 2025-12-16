@@ -21,6 +21,17 @@ This was done by soliciting ratings on how "good" a small set of controversial o
 
 ## What's in this Path
 
+### Installation
+
+Setup miniconda / uv / etc for managing the environment. Eg:
+```bash
+# Activate the environment you are useing (or make a new one)
+conda create -n gptosoexp python=3.12
+conda activate gptossexp
+# Install this dir
+pip install -e .
+```
+
 ### Policy Test Framework
 
 We provide a basic framework that we used for iterating on policies.
@@ -55,7 +66,7 @@ from gpt_oss_utils_dactile.model_predict import ModelResponse, Model, InferenceB
 
 response: ClassificationResult = classify(
     text="I hate puppies",
-    policy=toy_example_policy, # Just pass in your module
+    policy=toy_example_policy, # Just pass in your policy module
     model = Model.GPT_OSS_20B,
     backend = InferenceBackend.API_INJECT_HARMONY,
     #         ^ This is the version that follows the HF space style.
@@ -70,4 +81,9 @@ print(response.binary_label)
 
 Entry point there is gpt_oss_utils_dactile/hackathon/hello_controversial.py
 
-Again, it is hacky. The synthesized data there is in the controversial-micro.jsonl file.
+Again, it is hacky. The synthesized data there 
+is in the controversial-micro.jsonl file.
+
+### Contact
+
+Feel free to make a discussion and tag @DNGros

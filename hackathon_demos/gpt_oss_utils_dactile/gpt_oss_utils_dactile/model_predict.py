@@ -227,7 +227,6 @@ def _build_messages_harmony(
         ),
         Message.from_role_and_content(Role.USER, prompt),
     ]
-    print(conv_messages)
     messages = []
     for pre_msg in conv_messages:
         tokens = enc.render(pre_msg)
@@ -236,7 +235,6 @@ def _build_messages_harmony(
             "role": re.search(r"<\|start\|>(.*?)<\|message\|>", prompt).group(1),
             "content": re.search(r"<\|message\|>(.*?)<\|end\|>", prompt, re.DOTALL).group(1),
         })
-    print(messages)
     return messages
 
 
