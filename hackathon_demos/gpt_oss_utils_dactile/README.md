@@ -21,6 +21,9 @@ This was done by soliciting ratings on how "good" a small set of controversial o
 
 ## What's in this Path
 
+This path includes code for the hackathon results as well as a potentially
+useful policy framework.
+
 ### Installation
 
 Setup miniconda / uv / etc for managing the environment. Eg:
@@ -80,6 +83,10 @@ print(response.binary_label)
 ### Code for Hackathon Experiment
 
 Entry point there is gpt_oss_utils_dactile/hackathon/hello_controversial.py
+```
+# Runs all 102 examples with both models and prints some analysis outputs
+python -m gpt_oss_utils_dactile.hackathon.hello_controversial
+```
 
 Again, it is hacky. The synthesized data there 
 is in the controversial-micro.jsonl file.
