@@ -8,7 +8,7 @@ without as much cruft. However, it's still pretty hacky.
 
 Notes from the hackathon are written up in this post:
 
-[https://dactile.net/p/dev-notes-24/article.html](Dev Notes 24: Small Evaluation of GPT-OSS-Safeguard Preferences; Also Prompting Experiments)
+[Dev Notes 24: Small Evaluation of GPT-OSS-Safeguard Preferences; Also Prompting Experiments](https://dactile.net/p/dev-notes-24/article.html)
 
 The main points was around exploring the "policy-free" preference 
 of the Safeguard model vs the base model. 
@@ -17,7 +17,7 @@ This was done by soliciting ratings on how "good" a small set of controversial o
 - The GPT-OSS-Safeguard model appears to concentrate more of its ratings of controversial opinions to be the middle indecisive '3' (on a 1 to 5 scale). 72% of its ratings were '3' compared to 55% from the base model.
 - I previously had tried to replicate OpenAI's reported results on the ToxicChat dataset. Yacine @ HF had interesting insight at the event around how to prompt the model with the Harmony format as done in the Huggingface Space. However, when I tried after the event with a simple prompt on ToxicChat, the prompt formats did not make much difference. This is perhaps relieving, as it means the simpler approach of passing in the policy into the "system" role might not be much worse than the harmony style. Still more to explore here, and it would be great to hear if anyone else explores/explored replicating results from the paper or looks at comparing prompt format or HF Inference vs Local inference. I'm unsure if local and groq actually return equivalent outputs.
 
-![gpt_oss_utils_dactile/hackathon/likert_distribution_comparison.svg](Plot comparing the data)
+![Plot comparing the data](gpt_oss_utils_dactile/hackathon/likert_distribution_comparison.svg)
 
 ## What's in this Path
 
@@ -25,7 +25,7 @@ This was done by soliciting ratings on how "good" a small set of controversial o
 
 Setup miniconda / uv / etc for managing the environment. Eg:
 ```bash
-# Activate the environment you are useing (or make a new one)
+# Activate the environment you are using (or make a new one)
 conda create -n gptosoexp python=3.12
 conda activate gptossexp
 # Install this dir
@@ -35,7 +35,7 @@ pip install -e .
 ### Policy Test Framework
 
 We provide a basic framework that we used for iterating on policies.
-It's primative, but the idea is add a module with a policy and a parse function.
+It's primitive, but the idea is to add a module with a policy and a parse function.
 ```python
 # toy_example_policy.py
 
