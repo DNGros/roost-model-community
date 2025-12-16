@@ -22,7 +22,7 @@ This was done by soliciting ratings on how "good" a small set of controversial o
 ## What's in this Path
 
 This path includes code for the hackathon results as well as a potentially
-useful policy framework.
+useful framework to build off for testing policies.
 
 ### Installation
 
@@ -59,9 +59,9 @@ def parse(response: ModelResponse) -> ClassificationResult:
         parsed_successfully=(text == "1" or text == "0")
     )
 ```
-See [gpt_oss_utils_dactile/policies](./policies) directory for other examples.
+See [gpt_oss_utils_dactile/policies](./gpt_oss_utils_dactile/policies) directory for other examples.
 
-Then you can use the classify.
+Then you can use the classify method.
 ```python
 from gpt_oss_utils_dactile.classify import classify, ClassificationResult
 import toy_example_policy
@@ -74,6 +74,9 @@ response: ClassificationResult = classify(
     backend = InferenceBackend.API_INJECT_HARMONY,
     #         ^ This is the version that follows the HF space style.
     #           See the post for explaining some of this nuance.
+    #           If you instead use InferenceBackend.API it will instead
+    #           just pass things into the `system` prompt rather 
+    #           than the `developer` channel.
     use_cache: bool = True,
     #                 ^ cache this for rerun later
 )
@@ -82,14 +85,14 @@ print(response.binary_label)
 
 ### Code for Hackathon Experiment
 
-Entry point there is gpt_oss_utils_dactile/hackathon/hello_controversial.py
+Entry point there is [gpt_oss_utils_dactile/hackathon/hello_controversial.py](./gpt_oss_utils_dactile/hackathon/hello_controversial.py)
 ```
 # Runs all 102 examples with both models and prints some analysis outputs
 python -m gpt_oss_utils_dactile.hackathon.hello_controversial
 ```
 
 Again, it is hacky. The synthesized data there 
-is in the controversial-micro.jsonl file.
+is in the [controversial-micro.jsonl](./gpt_oss_utils_dactile/hackathon/controversial-micro.jsonl) file.
 
 ### Contact
 
